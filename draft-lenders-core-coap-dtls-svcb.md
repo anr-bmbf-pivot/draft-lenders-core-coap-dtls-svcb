@@ -51,11 +51,11 @@ normative:
   RFC7301: alpn
   RFC9460: svcb
   RFC9463: dnr
-  I-D.ietf-core-dns-over-coap: doc
 
 informative:
   RFC8323: coap-tcp
   I-D.amsuess-core-coap-over-gatt: coap-gatt
+  I-D.ietf-core-dns-over-coap: doc
   lwm2m:
     title: White Paper – Lightweight M2M 1.1
     author:
