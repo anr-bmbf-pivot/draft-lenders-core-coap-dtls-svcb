@@ -36,6 +36,10 @@ author:
     email: christian@amsuess.com
  -  fullname: Thomas C. Schmidt
     organization: HAW Hamburg
+    street: Berliner Tor 7
+    city: Hamburg
+    code: D-20099
+    country: Germany
     email: t.schmidt@haw-hamburg.de
  -  name: Matthias Wählisch
     org: TUD Dresden University of Technology & Barkhausen Institut
@@ -66,23 +70,23 @@ informative:
 --- abstract
 
 This document specifies the usage of "SVCB" ("Service Binding") DNS resource
-records for the discovery of transport secured CoAP services.
+records for the discovery of secured CoAP transport services.
 
 --- middle
 
 # Introduction
 
-{{-svcb}} specifies the "SVCB" ("Service Binding") DNS resource records to lookup information on
-how to communicate with a service. Service Parameters (SvcParams) are used to
+{{-svcb}} specifies the "SVCB" ("Service Binding") DNS resource records for looking up
+ communication endpoints of a service. Service Parameters (SvcParams) are used to
 carry that information.
-This document specifies how to lookup information, i.e., SvcParams, for CoAP services that are
+This document specifies how to look up information, i.e., SvcParams, for CoAP services that are
 secured by transport security, namely TLS and DTLS.
-As an example use case, this information can be used to discover DNS over CoAP (DoC) servers (see
-{{-doc}}) that use TLS or DTLS to secure their messages.
+As an example, this information can be used to discover DNS over CoAP (DoC) servers (see
+{{-doc}}) that deploy TLS or DTLS to secure their messages.
 
-Future work may also provide guidance on how to discover CoAP services that secure their messages
+Future work may also provide guidance on how to discover CoAP services that secure messages
 using OSCORE or use transport layers other than TCP or UDP (see, e.g.,
-{{-coap-gatt}} or {{lwm2m}}). They are, however, out of bounds for this document.[^1]
+{{-coap-gatt}} or {{lwm2m}}). They are, however, out of scope for this document.[^1]
 
 [^1]: Remove this paragraph?
 {: source="Martine"}
@@ -96,11 +100,11 @@ messages as defined in {{-dnr}}.
 
 # Application-Layer Protocol Negotiation (ALPN) IDs
 
-{{-svcb}} defines the "alpn" key, which is used to identify the protocol suite of a service binding
+{{-svcb}} defines the "alpn" key, which is used to identify the  service binding to a protocol suite 
 using its Application-Layer Protocol Negotiation (ALPN) ID {{-alpn}}.
 For CoAP over TLS an ALPN ID was defined in {{-coap-tcp}}.
-As using the same ALPN ID for different transport layers is not recommended, an ALPN for
-CoAP over DTLS has also been registered in {{iana}}.
+As it is not advisable to re-use the same ALPN ID for a different transport layer, an ALPN for
+CoAP over DTLS is also registered in {{iana}}.
 To discover CoAP services that secure their messages with TLS or DTLS, these ALPN IDs can be used in
 the same manner as for any other service secured with transport layer security, as
 described in {{-svcb}}.
@@ -122,7 +126,7 @@ which is part of the "Transport Layer Security (TLS) Extensions" group.
 * Identification sequence: 0x63 0x6f ("co")
 * Reference: {{-coap}} and \[this document\]
 
-Note that {{-coap}} does not prescribe the use of the ALPN TLS extension during connection the DTLS handshake.
+Note that {{-coap}} does not define the use of the ALPN TLS extension during connection the DTLS handshake.
 This document does not change that, and thus does not establish any rules like those in {{Section 8.2 of -coap-tcp}}.
 
 
