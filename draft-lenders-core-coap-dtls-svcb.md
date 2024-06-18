@@ -74,10 +74,11 @@ records for the discovery of transport secured CoAP services.
 
 {{-svcb}} specifies the "SVCB" ("Service Binding") DNS resource records to lookup information on
 how to communicate with a service. Service Parameters (SvcParams) are used to
-carry that information. This document specifies how to lookup information, or
-SvcParams, on CoAP services that are secured by transport security, namely TLS and DTLS. These
-SvcParams can also be used to discover DNS over CoAP (DoC) servers (see
-{{-doc}}) that use TLS and DTLS to secure their messages.
+carry that information.
+This document specifies how to lookup information, i.e., SvcParams, for CoAP services that are
+secured by transport security, namely TLS and DTLS.
+As an example use case, this information can be used to discover DNS over CoAP (DoC) servers (see
+{{-doc}}) that use TLS or DTLS to secure their messages.
 
 Future work may also provide guidance on how to discover CoAP services that secure their messages
 using OSCORE or use transport layers other than TCP or UDP (see, e.g.,
