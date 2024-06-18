@@ -82,7 +82,10 @@ As an example use case, this information can be used to discover DNS over CoAP (
 
 Future work may also provide guidance on how to discover CoAP services that secure their messages
 using OSCORE or use transport layers other than TCP or UDP (see, e.g.,
-{{-coap-gatt}} or {{lwm2m}}). They are, however, out of bounds for this document.
+{{-coap-gatt}} or {{lwm2m}}). They are, however, out of bounds for this document.[^1]
+
+[^1]: Remove this paragraph?
+{: source="Martine"}
 
 # Terminology
 
@@ -94,16 +97,14 @@ messages as defined in {{-dnr}}.
 # Application-Layer Protocol Negotiation (ALPN) IDs
 
 {{-svcb}} defines the "alpn" key, which is used to identify the protocol suite of a service binding
-using its Application-Layer Protocol Negotiation (ALPN) ID {{-alpn}}. There is
-an ALPN ID for CoAP over TLS that was defined in {{-coap-tcp}}. As using the
-same ALPN ID for different transport layers is not recommended, an ALPN for
-CoAP over DTLS has also been registered in {{iana}}. To discover CoAP services
-that secure their messages with TLS or DTLS, these ALPN IDs can be used in the
-same manner as for any other service secured with transport layer security, as
-described in {{-svcb}}. Other authentication mechanisms are currently out of scope.
-
-# Constructing a CoAP URI from a SVCB Resource Record
-TBD Christian
+using its Application-Layer Protocol Negotiation (ALPN) ID {{-alpn}}.
+For CoAP over TLS an ALPN ID was defined in {{-coap-tcp}}.
+As using the same ALPN ID for different transport layers is not recommended, an ALPN for
+CoAP over DTLS has also been registered in {{iana}}.
+To discover CoAP services that secure their messages with TLS or DTLS, these ALPN IDs can be used in
+the same manner as for any other service secured with transport layer security, as
+described in {{-svcb}}.
+Other authentication mechanisms are currently out of scope.
 
 # Security Considerations
 
