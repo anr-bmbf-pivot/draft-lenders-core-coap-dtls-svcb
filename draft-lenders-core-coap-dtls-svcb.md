@@ -100,7 +100,7 @@ messages as defined in {{-dnr}}.
 
 # Application-Layer Protocol Negotiation (ALPN) IDs
 
-{{-svcb}} defines the "alpn" key, which is used to identify the  service binding to a protocol suite 
+{{-svcb}} defines the "alpn" key, which is used to identify the service binding to a protocol suite
 using its Application-Layer Protocol Negotiation (ALPN) ID {{-alpn}}.
 For CoAP over TLS an ALPN ID was defined in {{-coap-tcp}}.
 As it is not advisable to re-use the same ALPN ID for a different transport layer, an ALPN for
