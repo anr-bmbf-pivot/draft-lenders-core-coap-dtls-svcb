@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Standards Track                               C. Amsüss
-Expires: 20 December 2024                                               
+Expires: 21 December 2024                                               
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                            18 June 2024
+                                                            19 June 2024
 
 
     Service Binding and Parameter Specification for CoAP over (D)TLS
@@ -19,7 +19,7 @@ Expires: 20 December 2024
 Abstract
 
    This document specifies the usage of "SVCB" ("Service Binding") DNS
-   resource records for the discovery of transport secured CoAP
+   resource records for the discovery of secured CoAP transport
    services.
 
 About This Document
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 December 2024.
+   This Internet-Draft will expire on 21 December 2024.
 
 Copyright Notice
 
@@ -88,20 +88,18 @@ Table of Contents
 1.  Introduction
 
    [RFC9460] specifies the "SVCB" ("Service Binding") DNS resource
-   records to lookup information on how to communicate with a service.
-   Service Parameters (SvcParams) are used to carry that information.
-   This document specifies how to lookup information, i.e., SvcParams,
-   for CoAP services that are secured by transport security, namely TLS
-   and DTLS.  As an example use case, this information can be used to
-   discover DNS over CoAP (DoC) servers (see
-   [I-D.ietf-core-dns-over-coap]) that use TLS or DTLS to secure their
-   messages.
+   records for looking up communication endpoints of a service.  Service
+   Parameters (SvcParams) are used to carry that information.  This
+   document specifies how to look up information, i.e., SvcParams, for
+   CoAP services that are secured by transport security, namely TLS and
+   DTLS.  As an example, this information can be used to discover DNS
+   over CoAP (DoC) servers (see [I-D.ietf-core-dns-over-coap]) that
+   deploy TLS or DTLS to secure their messages.
 
    Future work may also provide guidance on how to discover CoAP
-   services that secure their messages using OSCORE or use transport
-   layers other than TCP or UDP (see, e.g.,
-   [I-D.amsuess-core-coap-over-gatt] or [lwm2m]).  They are, however,
-   out of bounds for this document.
+   services that secure messages using OSCORE or use transport layers
+   other than TCP or UDP (see, e.g., [I-D.amsuess-core-coap-over-gatt]
+   or [lwm2m]).  They are, however, out of scope for this document.
    // Remove this paragraph?
    //
    // -- Martine
@@ -121,11 +119,11 @@ Table of Contents
 3.  Application-Layer Protocol Negotiation (ALPN) IDs
 
    [RFC9460] defines the "alpn" key, which is used to identify the
-   protocol suite of a service binding using its Application-Layer
+   service binding to a protocol suite using its Application-Layer
    Protocol Negotiation (ALPN) ID [RFC7301].  For CoAP over TLS an ALPN
-   ID was defined in [RFC8323].  As using the same ALPN ID for different
-   transport layers is not recommended, an ALPN for CoAP over DTLS has
-   also been registered in Section 5.  To discover CoAP services that
+   ID was defined in [RFC8323].  As it is not advisable to re-use the
+   same ALPN ID for a different transport layer, an ALPN for CoAP over
+   DTLS is also registered in Section 5.  To discover CoAP services that
    secure their messages with TLS or DTLS, these ALPN IDs can be used in
    the same manner as for any other service secured with transport layer
    security, as described in [RFC9460].  Other authentication mechanisms
@@ -150,10 +148,10 @@ Table of Contents
 
    *  Reference: [RFC7252] and [this document]
 
-   Note that [RFC7252] does not prescribe the use of the ALPN TLS
-   extension during connection the DTLS handshake.  This document does
-   not change that, and thus does not establish any rules like those in
-   Section 8.2 of [RFC8323].
+   Note that [RFC7252] does not define the use of the ALPN TLS extension
+   during connection the DTLS handshake.  This document does not change
+   that, and thus does not establish any rules like those in Section 8.2
+   of [RFC8323].
 
 6.  References
 
@@ -237,6 +235,9 @@ Authors' Addresses
 
    Thomas C. Schmidt
    HAW Hamburg
+   Berliner Tor 7
+   D-20099 Hamburg
+   Germany
    Email: t.schmidt@haw-hamburg.de
 
 
