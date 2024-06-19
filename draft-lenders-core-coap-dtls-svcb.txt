@@ -19,7 +19,7 @@ Expires: 21 December 2024
 Abstract
 
    This document specifies the usage of "SVCB" ("Service Binding") DNS
-   resource records for the discovery of transport-secured CoAP
+   resource records for the discovery of transport-layer-secured CoAP
    services.
 
 About This Document
