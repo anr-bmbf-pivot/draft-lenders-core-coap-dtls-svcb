@@ -70,7 +70,7 @@ informative:
 --- abstract
 
 This document specifies the usage of "SVCB" ("Service Binding") DNS resource
-records for the discovery of secured CoAP transport services.
+records for the discovery of transport-secured CoAP services.
 
 --- middle
 
