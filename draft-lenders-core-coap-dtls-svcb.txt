@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Standards Track                               C. Amsüss
-Expires: 21 December 2024                                               
+Expires: 22 December 2024                                               
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                            19 June 2024
+                                                            20 June 2024
 
 
     Service Binding and Parameter Specification for CoAP over (D)TLS
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 December 2024.
+   This Internet-Draft will expire on 22 December 2024.
 
 Copyright Notice
 
@@ -95,14 +95,6 @@ Table of Contents
    DTLS.  As an example, this information can be used to discover DNS
    over CoAP (DoC) servers (see [I-D.ietf-core-dns-over-coap]) that
    deploy TLS or DTLS to secure their messages.
-
-   Future work may also provide guidance on how to discover CoAP
-   services that secure messages using OSCORE or use transport layers
-   other than TCP or UDP (see, e.g., [I-D.amsuess-core-coap-over-gatt]
-   or [lwm2m]).  They are, however, out of scope for this document.
-   // Remove this paragraph?
-   //
-   // -- Martine
 
 2.  Terminology
 
