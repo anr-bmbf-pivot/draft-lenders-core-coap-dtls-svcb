@@ -62,7 +62,7 @@ informative:
 
 --- abstract
 
-This document specifies the usage of "SVCB" ("Service Binding") DNS resource
+This document specifies the usage of Service Parameters as used in SVCB ("Service Binding") DNS resource
 records for the discovery of transport-layer-secured CoAP services.
 
 --- middle
@@ -70,11 +70,11 @@ records for the discovery of transport-layer-secured CoAP services.
 # Introduction
 
 {{-svcb}} specifies the "SVCB" ("Service Binding") DNS resource records for looking up
- communication endpoints of a service. Service Parameters (SvcParams) are used to
+communication endpoints of a service. Service Parameters (SvcParams) are used to
 carry that information.
-This document specifies how to look up information, i.e., SvcParams, for CoAP services that are
+This document specifies which information from SvcParams can be used with CoAP services that are
 secured by transport security, namely TLS and DTLS.
-As an example, this information can be used to discover DNS over CoAP (DoC) servers (see
+As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see
 {{-doc}}) that deploy TLS or DTLS to secure their messages.
 
 # Terminology
