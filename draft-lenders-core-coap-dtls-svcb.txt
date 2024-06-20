@@ -181,23 +181,12 @@ Table of Contents
 
 6.2.  Informative References
 
-   [I-D.amsuess-core-coap-over-gatt]
-              Amsüss, C., "CoAP over GATT (Bluetooth Low Energy Generic
-              Attributes)", Work in Progress, Internet-Draft, draft-
-              amsuess-core-coap-over-gatt-06, 18 March 2024,
-              <https://datatracker.ietf.org/doc/html/draft-amsuess-core-
-              coap-over-gatt-06>.
-
    [I-D.ietf-core-dns-over-coap]
               Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
               and M. Wählisch, "DNS over CoAP (DoC)", Work in Progress,
               Internet-Draft, draft-ietf-core-dns-over-coap-06, 4 March
               2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
               core-dns-over-coap-06>.
-
-   [lwm2m]    OMA SpecWorks, "White Paper – Lightweight M2M 1.1",
-              October 2018, <https://omaspecworks.org/white-paper-
-              lightweight-m2m-1-1/>.
 
    [RFC8323]  Bormann, C., Lemay, S., Tschofenig, H., Hartke, K.,
               Silverajan, B., and B. Raymor, Ed., "CoAP (Constrained
