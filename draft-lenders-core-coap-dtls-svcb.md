@@ -58,14 +58,7 @@ normative:
 
 informative:
   RFC8323: coap-tcp
-  I-D.amsuess-core-coap-over-gatt: coap-gatt
   I-D.ietf-core-dns-over-coap: doc
-  lwm2m:
-    title: White Paper – Lightweight M2M 1.1
-    author:
-      org: OMA SpecWorks
-    date: 2018-10
-    target: https://omaspecworks.org/white-paper-lightweight-m2m-1-1/
 
 --- abstract
 
