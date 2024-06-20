@@ -18,9 +18,9 @@ Expires: 22 December 2024
 
 Abstract
 
-   This document specifies the usage of "SVCB" ("Service Binding") DNS
-   resource records for the discovery of transport-layer-secured CoAP
-   services.
+   This document specifies the usage of Service Parameters as used in
+   SVCB ("Service Binding") DNS resource records for the discovery of
+   transport-layer-secured CoAP services.
 
 About This Document
 
@@ -90,11 +90,12 @@ Table of Contents
    [RFC9460] specifies the "SVCB" ("Service Binding") DNS resource
    records for looking up communication endpoints of a service.  Service
    Parameters (SvcParams) are used to carry that information.  This
-   document specifies how to look up information, i.e., SvcParams, for
+   document specifies which information from SvcParams can be used with
    CoAP services that are secured by transport security, namely TLS and
-   DTLS.  As an example, this information can be used to discover DNS
-   over CoAP (DoC) servers (see [I-D.ietf-core-dns-over-coap]) that
-   deploy TLS or DTLS to secure their messages.
+   DTLS.  As an example, this information can be obtained as part of the
+   discovery of DNS over CoAP (DoC) servers (see
+   [I-D.ietf-core-dns-over-coap]) that deploy TLS or DTLS to secure
+   their messages.
 
 2.  Terminology
 
