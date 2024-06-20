@@ -84,13 +84,6 @@ secured by transport security, namely TLS and DTLS.
 As an example, this information can be used to discover DNS over CoAP (DoC) servers (see
 {{-doc}}) that deploy TLS or DTLS to secure their messages.
 
-Future work may also provide guidance on how to discover CoAP services that secure messages
-using OSCORE or use transport layers other than TCP or UDP (see, e.g.,
-{{-coap-gatt}} or {{lwm2m}}). They are, however, out of scope for this document.[^1]
-
-[^1]: Remove this paragraph?
-{: source="Martine"}
-
 # Terminology
 
 SvcParams denotes the field in either DNS SVCB/HTTPS records as defined in {{-svcb}}, or DHCP and RA
