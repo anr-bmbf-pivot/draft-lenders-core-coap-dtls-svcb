@@ -21,7 +21,7 @@ venue:
   mail: "core@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/core/"
   github: "anr-bmbf-pivot/draft-lenders-core-coap-dtls-svcb"
-  latest: "https://anr-bmbf-pivot.github.io/draft-lenders-core-coap-dtls-svcb/draft-lenders-core-dnr.html"
+  latest: "https://anr-bmbf-pivot.github.io/draft-lenders-core-coap-dtls-svcb/draft-lenders-core-coap-dtls-svcb.html"
 
 author:
  -  fullname: Martine Sophie Lenders
