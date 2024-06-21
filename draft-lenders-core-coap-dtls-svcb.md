@@ -15,6 +15,7 @@ keyword:
  - CoRE
  - CoAP
  - SVCB
+ - DTLS
 venue:
   group: "Constrained RESTful Environments"
   type: "Working Group"
