@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Standards Track                               C. Amsüss
-Expires: 23 December 2024                                               
+Expires: 1 February 2025                                                
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                            21 June 2024
+                                                            31 July 2024
 
 
     Service Binding and Parameter Specification for CoAP over (D)TLS
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 December 2024.
+   This Internet-Draft will expire on 1 February 2025.
 
 Copyright Notice
 
@@ -123,6 +123,11 @@ Table of Contents
    security, as described in [RFC9460].  Other authentication mechanisms
    are currently out of scope.
 
+   ALPN values have no fixed length.  A short value ("co") is allocated
+   for CoAP over DTLS, which can play a role in avoiding fragmentation
+   of Client Hello and Server Hello messages on constrained networks
+   with link-layer fragmentation, such as 6LoWPAN [RFC4944].
+
 4.  Security Considerations
 
    Any security considerations on SVCB resource records (see [RFC9460]),
@@ -186,9 +191,14 @@ Table of Contents
    [I-D.ietf-core-dns-over-coap]
               Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
               and M. Wählisch, "DNS over CoAP (DoC)", Work in Progress,
-              Internet-Draft, draft-ietf-core-dns-over-coap-06, 4 March
+              Internet-Draft, draft-ietf-core-dns-over-coap-07, 28 June
               2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              core-dns-over-coap-06>.
+              core-dns-over-coap-07>.
+
+   [RFC4944]  Montenegro, G., Kushalnagar, N., Hui, J., and D. Culler,
+              "Transmission of IPv6 Packets over IEEE 802.15.4
+              Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
+              <https://www.rfc-editor.org/rfc/rfc4944>.
 
    [RFC8323]  Bormann, C., Lemay, S., Tschofenig, H., Hartke, K.,
               Silverajan, B., and B. Raymor, Ed., "CoAP (Constrained
