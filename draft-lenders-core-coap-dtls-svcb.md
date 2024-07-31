@@ -97,6 +97,13 @@ the same manner as for any other service secured with transport layer security, 
 described in {{-svcb}}.
 Other authentication mechanisms are currently out of scope.
 
+ALPN values have no fixed length.
+A short value ("co") is allocated for CoAP over DTLS,
+which can play a role in avoiding fragmentation
+of Client Hello and Server Hello messages
+on constrained networks with link-layer fragmentation,
+such as 6LoWPAN {{?RFC4944}}.
+
 # Security Considerations
 
 Any security considerations on SVCB resource records (see {{-svcb}}), also apply to this document.
