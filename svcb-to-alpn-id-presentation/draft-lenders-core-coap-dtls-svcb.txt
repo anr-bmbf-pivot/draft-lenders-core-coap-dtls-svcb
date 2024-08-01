@@ -87,7 +87,7 @@ Table of Contents
 
 1.  Introduction
 
-   Application-Layer Protocol Negotiation (ALPN) allows to agree on an
+   Application-Layer Protocol Negotiation (ALPN) allows agreeing on an
    application-layer protocol during a Transport Layer Security (TLS)
    handshake.  For that an ALPN ID is used.  Furthermore, the ALPN ID
    can be used to discover Service Bindings (SVCB) via DNS, using SVCB
@@ -205,7 +205,7 @@ Appendix A.  Change Log
 
 Acknowledgments
 
-   TODO acknowledge.
+   TODO acknowledge: - Rich Salz - Mohamed Boucadair - Ben Schwartz
 
 Authors' Addresses
 
