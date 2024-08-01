@@ -1196,9 +1196,10 @@ transport-layer-secured CoAP services.<a href="#section-abstract-1" class="pilcr
       </h2>
 <p id="section-1-1">Application-Layer Protocol Negotiation (ALPN) allows agreeing on an application-layer protocol during a Transport Layer Security (TLS) handshake.
 For that an ALPN ID is used.
-Furthermore, the ALPN ID can be used to discover Service Bindings (SVCB) via DNS, using SVCB resource records with the "alpn" Service Parameter Keys.
+Furthermore, the ALPN ID can discovered as part of Service Bindings (SVCB) via DNS, using SVCB resource records with the "alpn" Service Parameter Keys.
 As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see <span>[<a href="#I-D.ietf-core-dns-over-coap" class="cite xref">I-D.ietf-core-dns-over-coap</a>]</span>) that deploy TLS or DTLS to secure their messages.
-This document specifies ALPN IDs for CoAP services that are secured by transport security, namely TLS and DTLS.<a href="#section-1-1" class="pilcrow">¶</a></p>
+This document specifies an ALPN ID for CoAP services that are secured by transport security, namely DTLS.
+An APLPN ID for CoAP service secured by TLS has already been specified in <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="terminology">
@@ -1222,7 +1223,7 @@ As it is not advisable to re-use the same ALPN ID for a different transport laye
 CoAP over DTLS is also registered in <a href="#iana" class="auto internal xref">Section 5</a>.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">ALPN ID values have no fixed length.
 A short value ("co") is allocated for CoAP over DTLS.
-This avoids fragmentation of Client Hello and Server Hello messages in constrained networks with link-layer fragmentation, such as 6LoWPAN <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span>.<a href="#section-3-2" class="pilcrow">¶</a></p>
+This can avoid fragmentation of Client Hello and Server Hello messages in constrained networks with link-layer fragmentation, such as 6LoWPAN <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span>.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">To discover CoAP services that secure their messages with TLS or DTLS, these ALPN IDs can be used in
 the same manner as for any other service secured with transport layer security, as
 described in <span>[<a href="#RFC9460" class="cite xref">RFC9460</a>]</span>.
