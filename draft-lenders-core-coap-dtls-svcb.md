@@ -121,4 +121,6 @@ This document does not change that, and thus does not establish any rules like t
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+We like to thank Rich Salz for the expert review on the "co" ALPN ID allocation.
+We also like to thank Mohamed Boucadair and Ben Schwartz for their early review before WG adoption
+of this draft.
