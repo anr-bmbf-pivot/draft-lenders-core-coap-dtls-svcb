@@ -1,6 +1,6 @@
 ---
-title: "Service Binding and Parameter Specification for CoAP over (D)TLS "
-abbrev: "CoRE SVCB"
+title: "ALPN ID Specification for CoAP over DTLS "
+abbrev: "CoRE ALPN"
 category: std
 
 docname: draft-lenders-core-coap-dtls-svcb-latest
@@ -16,6 +16,7 @@ keyword:
  - CoAP
  - SVCB
  - DTLS
+ - ALPN
 venue:
   group: "Constrained RESTful Environments"
   type: "Working Group"
@@ -60,61 +61,49 @@ normative:
 informative:
   RFC8323: coap-tcp
   I-D.ietf-core-dns-over-coap: doc
+  RFC4944: 6lo
 
 --- abstract
 
-This document specifies the usage of Service Parameters as used in SVCB ("Service Binding") DNS resource
-records for the discovery of transport-layer-secured CoAP services.
+This document specifies an Application-Layer Protocol Negotiation (ALPN) ID for
+transport-layer-secured CoAP services.
 
 --- middle
 
 # Introduction
 
-{{-svcb}} specifies the "SVCB" ("Service Binding") DNS resource records for looking up
-communication endpoints of a service. Service Parameters (SvcParams) are used to
-carry that information.
-This document specifies which information from SvcParams can be used with CoAP services that are
-secured by transport security, namely TLS and DTLS.
-As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see
-{{-doc}}) that deploy TLS or DTLS to secure their messages.
-
-# Terminology
-
-SvcParams denotes the field in either DNS SVCB/HTTPS records as defined in {{-svcb}}, or DHCP and RA
-messages as defined in {{-dnr}}.
-
-{::boilerplate bcp14-tagged}
+Application-Layer Protocol Negotiation (ALPN) allows agreeing on an application-layer protocol during a Transport Layer Security (TLS) handshake.
+For that an ALPN ID is used.
+Furthermore, the ALPN ID can be discovered as part of Service Bindings (SVCB) via DNS, using SVCB resource records with the "alpn" Service Parameter Keys.
+As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see {{-doc}}) that deploy TLS or DTLS to secure their messages.
+This document specifies an ALPN ID for CoAP services that are secured by transport security using DTLS.
+An ALPN ID for CoAP service secured by TLS has already been specified in {{?RFC8323}}.
 
 # Application-Layer Protocol Negotiation (ALPN) IDs
 
-{{-svcb}} defines the "alpn" key, which is used to identify the service binding to a protocol suite
-using its Application-Layer Protocol Negotiation (ALPN) ID {{-alpn}}.
-For CoAP over TLS an ALPN ID was defined in {{-coap-tcp}}.
+For CoAP over TLS an ALPN ID was defined as "coaps" in {{-coap-tcp}}.
 As it is not advisable to re-use the same ALPN ID for a different transport layer, an ALPN for
 CoAP over DTLS is also registered in {{iana}}.
-To discover CoAP services that secure their messages with TLS or DTLS, these ALPN IDs can be used in
+
+ALPN ID values have no fixed length.
+A short value ("co") is allocated for CoAP over DTLS.
+This can avoid fragmentation of Client Hello and Server Hello messages in constrained networks with link-layer fragmentation, such as 6LoWPAN {{-6lo}}.
+
+To discover CoAP services that secure their messages with TLS or DTLS, ALPN IDs "coaps" and "co" can be used respectively in
 the same manner as for any other service secured with transport layer security, as
 described in {{-svcb}}.
 Other authentication mechanisms are currently out of scope.
 
-ALPN values have no fixed length.
-A short value ("co") is allocated for CoAP over DTLS,
-which can play a role in avoiding fragmentation
-of Client Hello and Server Hello messages
-on constrained networks with link-layer fragmentation,
-such as 6LoWPAN {{?RFC4944}}.
-
 # Security Considerations
 
-Any security considerations on SVCB resource records (see {{-svcb}}), also apply to this document.
+Any security considerations on ALPN (see {{-alpn}}) and SVCB resource records (see {{-svcb}}), also
+apply to this document.
 
 # IANA Considerations {#iana}
 
 ## TLS ALPN for CoAP
 
-The following entry has been added to the
-"TLS Application-Layer Protocol Negotiation (ALPN) Protocol IDs" registry,
-which is part of the "Transport Layer Security (TLS) Extensions" group.
+The following entry has been added to the "TLS Application-Layer Protocol Negotiation (ALPN) Protocol IDs" registry, which is part of the "Transport Layer Security (TLS) Extensions" group.
 
 * Protocol: CoAP (over DTLS)
 * Identification sequence: 0x63 0x6f ("co")
@@ -132,4 +121,6 @@ This document does not change that, and thus does not establish any rules like t
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+We like to thank Rich Salz for the expert review on the "co" ALPN ID allocation.
+We also like to thank Mohamed Boucadair and Ben Schwartz for their early review before WG adoption
+of this draft.
