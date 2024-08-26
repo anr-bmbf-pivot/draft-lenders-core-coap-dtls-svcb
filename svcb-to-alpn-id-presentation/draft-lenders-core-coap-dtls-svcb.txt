@@ -189,7 +189,13 @@ Appendix A.  Change Log
 
 Acknowledgments
 
-   TODO acknowledge: - Rich Salz - Mohamed Boucadair - Ben Schwartz
+   TODO acknowledge:
+
+   *  Rich Salz
+
+   *  Mohamed Boucadair
+
+   *  Ben Schwartz
 
 Authors' Addresses
 
