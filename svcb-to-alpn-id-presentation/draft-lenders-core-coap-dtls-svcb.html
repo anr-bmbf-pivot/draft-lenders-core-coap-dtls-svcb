@@ -1204,13 +1204,13 @@ An ALPN ID for CoAP service secured by TLS has already been specified in <span>[
       <h2 id="name-application-layer-protocol-">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-application-layer-protocol-" class="section-name selfRef">Application-Layer Protocol Negotiation (ALPN) IDs</a>
       </h2>
-<p id="section-2-1">For CoAP over TLS an ALPN ID was defined in <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span>.
+<p id="section-2-1">For CoAP over TLS an ALPN ID was defined as "coaps" in <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span>.
 As it is not advisable to re-use the same ALPN ID for a different transport layer, an ALPN for
 CoAP over DTLS is also registered in <a href="#iana" class="auto internal xref">Section 4</a>.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">ALPN ID values have no fixed length.
 A short value ("co") is allocated for CoAP over DTLS.
 This can avoid fragmentation of Client Hello and Server Hello messages in constrained networks with link-layer fragmentation, such as 6LoWPAN <span>[<a href="#RFC4944" class="cite xref">RFC4944</a>]</span>.<a href="#section-2-2" class="pilcrow">¶</a></p>
-<p id="section-2-3">To discover CoAP services that secure their messages with TLS or DTLS, ALPN IDs "coap" and "co" can be used respectively in
+<p id="section-2-3">To discover CoAP services that secure their messages with TLS or DTLS, ALPN IDs "coaps" and "co" can be used respectively in
 the same manner as for any other service secured with transport layer security, as
 described in <span>[<a href="#RFC9460" class="cite xref">RFC9460</a>]</span>.
 Other authentication mechanisms are currently out of scope.<a href="#section-2-3" class="pilcrow">¶</a></p>

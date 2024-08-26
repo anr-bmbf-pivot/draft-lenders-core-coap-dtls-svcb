@@ -100,9 +100,10 @@ Table of Contents
 
 2.  Application-Layer Protocol Negotiation (ALPN) IDs
 
-   For CoAP over TLS an ALPN ID was defined in [RFC8323].  As it is not
-   advisable to re-use the same ALPN ID for a different transport layer,
-   an ALPN for CoAP over DTLS is also registered in Section 4.
+   For CoAP over TLS an ALPN ID was defined as "coaps" in [RFC8323].  As
+   it is not advisable to re-use the same ALPN ID for a different
+   transport layer, an ALPN for CoAP over DTLS is also registered in
+   Section 4.
 
    ALPN ID values have no fixed length.  A short value ("co") is
    allocated for CoAP over DTLS.  This can avoid fragmentation of Client
@@ -110,7 +111,7 @@ Table of Contents
    layer fragmentation, such as 6LoWPAN [RFC4944].
 
    To discover CoAP services that secure their messages with TLS or
-   DTLS, ALPN IDs "coap" and "co" can be used respectively in the same
+   DTLS, ALPN IDs "coaps" and "co" can be used respectively in the same
    manner as for any other service secured with transport layer
    security, as described in [RFC9460].  Other authentication mechanisms
    are currently out of scope.
