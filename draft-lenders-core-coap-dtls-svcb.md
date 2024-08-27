@@ -113,7 +113,11 @@ This document does not change this behavior, and thus does not establish any rul
 --- back
 
 # Change Log
+## Since [draft-lenders-core-coap-dtls-svcb-00]
+- Give rationale for short value
+- Fix presentation to focus on ALPN ID rather than SVCB records
 
+[draft-lenders-core-coap-dtls-svcb-00]: https://datatracker.ietf.org/doc/html/draft-lenders-core-coap-dtls-svcb-00
 
 # Acknowledgments
 {:numbered="false"}
