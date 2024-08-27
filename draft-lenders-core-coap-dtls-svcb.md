@@ -56,7 +56,6 @@ normative:
   RFC7252: coap
   RFC7301: alpn
   RFC9460: svcb
-  RFC9463: dnr
 
 informative:
   RFC8323: coap-tcp
