@@ -1192,7 +1192,7 @@ transport-layer-secured CoAP services.<a href="#section-abstract-1" class="pilcr
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <p id="section-1-1">Application-Layer Protocol Negotiation (ALPN) enable communicating parties to agree on an application-layer protocol during a Transport Layer Security (TLS) handshake using an ALPN ID.
-This ALPN ID can be discovered as part of Service Bindings (SVCB) via the DNS, using SVCB resource records with the "alpn" Service Parameter Keys.
+This ALPN ID can be discovered for services as part of Service Bindings (SVCB) via the DNS, using SVCB resource records with the "alpn" Service Parameter Keys.
 As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see <span>[<a href="#I-D.ietf-core-dns-over-coap" class="cite xref">I-D.ietf-core-dns-over-coap</a>]</span>) that deploy TLS or DTLS to secure their messages.
 This document specifies an ALPN ID for CoAP services that are secured by transport security using DTLS.
 An ALPN ID for CoAP service secured by TLS has already been specified in <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
@@ -1271,12 +1271,8 @@ This document does not change this behavior, and thus does not establish any rul
 <span class="refAuthor">Friedl, S.</span>, <span class="refAuthor">Popov, A.</span>, <span class="refAuthor">Langley, A.</span>, and <span class="refAuthor">E. Stephan</span>, <span class="refTitle">"Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension"</span>, <span class="seriesInfo">RFC 7301</span>, <span class="seriesInfo">DOI 10.17487/RFC7301</span>, <time datetime="2014-07" class="refDate">July 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7301">https://www.rfc-editor.org/rfc/rfc7301</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9460">[RFC9460]</dt>
-        <dd>
-<span class="refAuthor">Schwartz, B.</span>, <span class="refAuthor">Bishop, M.</span>, and <span class="refAuthor">E. Nygren</span>, <span class="refTitle">"Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)"</span>, <span class="seriesInfo">RFC 9460</span>, <span class="seriesInfo">DOI 10.17487/RFC9460</span>, <time datetime="2023-11" class="refDate">November 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9460">https://www.rfc-editor.org/rfc/rfc9460</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC9463">[RFC9463]</dt>
       <dd>
-<span class="refAuthor">Boucadair, M., Ed.</span>, <span class="refAuthor">Reddy.K, T., Ed.</span>, <span class="refAuthor">Wing, D.</span>, <span class="refAuthor">Cook, N.</span>, and <span class="refAuthor">T. Jensen</span>, <span class="refTitle">"DHCP and Router Advertisement Options for the Discovery of Network-designated Resolvers (DNR)"</span>, <span class="seriesInfo">RFC 9463</span>, <span class="seriesInfo">DOI 10.17487/RFC9463</span>, <time datetime="2023-11" class="refDate">November 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9463">https://www.rfc-editor.org/rfc/rfc9463</a>&gt;</span>. </dd>
+<span class="refAuthor">Schwartz, B.</span>, <span class="refAuthor">Bishop, M.</span>, and <span class="refAuthor">E. Nygren</span>, <span class="refTitle">"Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)"</span>, <span class="seriesInfo">RFC 9460</span>, <span class="seriesInfo">DOI 10.17487/RFC9460</span>, <time datetime="2023-11" class="refDate">November 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9460">https://www.rfc-editor.org/rfc/rfc9460</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -1308,7 +1304,10 @@ This document does not change this behavior, and thus does not establish any rul
 <section id="appendix-A">
       <h2 id="name-change-log">
 <a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-change-log" class="section-name selfRef">Change Log</a>
-    </h2>
+      </h2>
+<p id="appendix-A-1">## Since <a href="https://datatracker.ietf.org/doc/html/draft-lenders-core-coap-dtls-svcb-00">draft-lenders-core-coap-dtls-svcb-00</a>
+- Give rationale for short value
+- Fix presentation to focus on ALPN ID rather than SVCB records<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="acknowledgments">

@@ -89,14 +89,14 @@ Table of Contents
    Application-Layer Protocol Negotiation (ALPN) enable communicating
    parties to agree on an application-layer protocol during a Transport
    Layer Security (TLS) handshake using an ALPN ID.  This ALPN ID can be
-   discovered as part of Service Bindings (SVCB) via the DNS, using SVCB
-   resource records with the "alpn" Service Parameter Keys.  As an
-   example, this information can be obtained as part of the discovery of
-   DNS over CoAP (DoC) servers (see [I-D.ietf-core-dns-over-coap]) that
-   deploy TLS or DTLS to secure their messages.  This document specifies
-   an ALPN ID for CoAP services that are secured by transport security
-   using DTLS.  An ALPN ID for CoAP service secured by TLS has already
-   been specified in [RFC8323].
+   discovered for services as part of Service Bindings (SVCB) via the
+   DNS, using SVCB resource records with the "alpn" Service Parameter
+   Keys.  As an example, this information can be obtained as part of the
+   discovery of DNS over CoAP (DoC) servers (see
+   [I-D.ietf-core-dns-over-coap]) that deploy TLS or DTLS to secure
+   their messages.  This document specifies an ALPN ID for CoAP services
+   that are secured by transport security using DTLS.  An ALPN ID for
+   CoAP service secured by TLS has already been specified in [RFC8323].
 
 2.  Application-Layer Protocol Negotiation (ALPN) IDs
 
@@ -159,12 +159,6 @@ Table of Contents
               Resource Records)", RFC 9460, DOI 10.17487/RFC9460,
               November 2023, <https://www.rfc-editor.org/rfc/rfc9460>.
 
-   [RFC9463]  Boucadair, M., Ed., Reddy.K, T., Ed., Wing, D., Cook, N.,
-              and T. Jensen, "DHCP and Router Advertisement Options for
-              the Discovery of Network-designated Resolvers (DNR)",
-              RFC 9463, DOI 10.17487/RFC9463, November 2023,
-              <https://www.rfc-editor.org/rfc/rfc9463>.
-
 5.2.  Informative References
 
    [I-D.ietf-core-dns-over-coap]
@@ -186,6 +180,11 @@ Table of Contents
               <https://www.rfc-editor.org/rfc/rfc8323>.
 
 Appendix A.  Change Log
+
+   ## Since draft-lenders-core-coap-dtls-svcb-00
+   (https://datatracker.ietf.org/doc/html/draft-lenders-core-coap-dtls-
+   svcb-00) - Give rationale for short value - Fix presentation to focus
+   on ALPN ID rather than SVCB records
 
 Acknowledgments
 
