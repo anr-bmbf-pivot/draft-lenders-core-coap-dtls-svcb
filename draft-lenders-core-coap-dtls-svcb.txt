@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Standards Track                               C. Amsüss
-Expires: 27 February 2025                                               
+Expires: 28 February 2025                                               
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                          26 August 2024
+                                                          27 August 2024
 
 
                 ALPN ID Specification for CoAP over DTLS
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 February 2025.
+   This Internet-Draft will expire on 28 February 2025.
 
 Copyright Notice
 
@@ -86,11 +86,11 @@ Table of Contents
 
 1.  Introduction
 
-   Application-Layer Protocol Negotiation (ALPN) allows agreeing on an
-   application-layer protocol during a Transport Layer Security (TLS)
-   handshake.  For that an ALPN ID is used.  Furthermore, the ALPN ID
-   can be discovered as part of Service Bindings (SVCB) via DNS, using
-   SVCB resource records with the "alpn" Service Parameter Keys.  As an
+   Application-Layer Protocol Negotiation (ALPN) enable communicating
+   parties to agree on an application-layer protocol during a Transport
+   Layer Security (TLS) handshake using an ALPN ID.  This ALPN ID can be
+   discovered as part of Service Bindings (SVCB) via the DNS, using SVCB
+   resource records with the "alpn" Service Parameter Keys.  As an
    example, this information can be obtained as part of the discovery of
    DNS over CoAP (DoC) servers (see [I-D.ietf-core-dns-over-coap]) that
    deploy TLS or DTLS to secure their messages.  This document specifies
@@ -102,13 +102,13 @@ Table of Contents
 
    For CoAP over TLS an ALPN ID was defined as "coaps" in [RFC8323].  As
    it is not advisable to re-use the same ALPN ID for a different
-   transport layer, an ALPN for CoAP over DTLS is also registered in
+   transport layer, an ALPN for CoAP over DTLS is registered in
    Section 4.
 
-   ALPN ID values have no fixed length.  A short value ("co") is
-   allocated for CoAP over DTLS.  This can avoid fragmentation of Client
-   Hello and Server Hello messages in constrained networks with link-
-   layer fragmentation, such as 6LoWPAN [RFC4944].
+   ALPN ID values have variable length.  Here, a short value ("co") is
+   allocated for CoAP over DTLS, as this can avoid fragmentation of
+   Client Hello and Server Hello messages in constrained networks with
+   link-layer fragmentation, such as 6LoWPAN [RFC4944].
 
    To discover CoAP services that secure their messages with TLS or
    DTLS, ALPN IDs "coaps" and "co" can be used respectively in the same
@@ -136,9 +136,9 @@ Table of Contents
    *  Reference: [RFC7252] and [this document]
 
    Note that [RFC7252] does not define the use of the ALPN TLS extension
-   during connection the DTLS handshake.  This document does not change
-   that, and thus does not establish any rules like those in Section 8.2
-   of [RFC8323].
+   during the DTLS connection handshake.  This document does not change
+   this behavior, and thus does not establish any rules like those in
+   Section 8.2 of [RFC8323].
 
 5.  References
 
